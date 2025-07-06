@@ -3,6 +3,9 @@ Documentation - Real-Time Vocabulary Quiz Coding Challenge
 
 Source code repositories:
 
+Documents:
+https://github.com/longleth/ELSA
+
 Microservices:
 https://github.com/longleth/elsa-coding-challenges
     => More details in README.md file
@@ -13,3 +16,6 @@ https://github.com/longleth/elsa-quiz-service
 Client Application:
 https://github.com/longleth/elsa-ranking-app
     => More details in README.md file
+
+Video Submission Link:
+
