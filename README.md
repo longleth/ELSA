@@ -72,6 +72,11 @@ Client Application:
 https://github.com/longleth/elsa-ranking-app
     => More details in README.md file
 
-Video Submission Link:
+Video Submission Links:
 
-
+- Introduction & Solution overview:
+    Youtube: https://youtu.be/vO556xlWe8E
+    G-Drive: https://drive.google.com/file/d/1iniXhoL9DD56q0eC6BnbTvtARq5_Qdv9/view?usp=sharing
+  - Demo session on local:
+    Youtube: https://youtu.be/dgBELzENYNw
+    G-Drive: https://drive.google.com/file/d/1xZ3tlA3tHYkTI1nYqes8f6qvfChNn9sA/view?usp=sharing
