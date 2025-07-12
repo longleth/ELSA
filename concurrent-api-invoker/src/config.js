@@ -1,7 +1,8 @@
 module.exports = {
-    apiUrl: 'http://localhost:8080/api/quiz/submit',  // Replace with your actual endpoint
+    // apiUrl: 'http://localhost:8080/api/quiz/submit',  // Replace with your actual endpoint
+    apiUrl: 'http://elsa-user-score:8080/api/quiz/submit',
 
-    quizId: '686923eb6af25b779321f0f6', // constant quizId
+    quizId: '68712a0ce8b11d4ba6baa8b9', // constant quizId
 
     userIds: ['user 1', 'user 2', 'user 3', 'user 4', 'user 5',
                 'user 6', 'user 7', 'user 8', 'user 9', 'user 10',
@@ -12,5 +13,5 @@ module.exports = {
                     'question_11', 'question_12', 'question_13', 'question_14', 'question_15',
                     'question_16', 'question_17', 'question_18', 'question_19', 'question_20'],
     answers: ['A', 'B', 'C'],
-    concurrency: 10000
+    concurrency: 1000
 };

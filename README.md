@@ -18,26 +18,27 @@ How to test real-time leader board app with 10000 concurrent submissions of 20 u
     https://github.com/longleth/elsa-ranking-app
     => More details in README.md file
 
-2. Let 20 predefined users join the quiz (quizId=686923eb6af25b779321f0f6):
+2. Let 20 predefined users join the quiz (quizId=68712a0ce8b11d4ba6baa8b9):
     POST: http://localhost:8080/api/quiz/join
    {
-       "quizId": "686923eb6af25b779321f0f6",
+       "quizId": "68712a0ce8b11d4ba6baa8b9",
        "userId": "user 1"
    }
    {
-       "quizId": "686923eb6af25b779321f0f6",
+       "quizId": "68712a0ce8b11d4ba6baa8b9",
        "userId": "user 2"
    }
     ...
    {
-       "quizId": "686923eb6af25b779321f0f6",
+       "quizId": "68712a0ce8b11d4ba6baa8b9",
        "userId": "user 20"
    }
 
-3. Delete REDIS cache key = "leaderboard:686923eb6af25b779321f0f6"
+3. Delete REDIS cache key = "leaderboard:68712a0ce8b11d4ba6baa8b9"
 
     - By CLI:
-        redis 127.0.0.1:6379> DEL leaderboard:686923eb6af25b779321f0f6
+      > docker exec -it elsa-redis redis-cli
+        redis 127.0.0.1:6379> DEL leaderboard:68712a0ce8b11d4ba6baa8b9
     - By Redis Client App, for example:
       http://localhost:8001/redis-stack/browser
 
@@ -50,6 +51,13 @@ How to test real-time leader board app with 10000 concurrent submissions of 20 u
 ..\ELSA\concurrent-api-invoker> node src/index.js
 
 => Observe the real-time updates on User Score Ranking page: http://localhost:5173/
+
+# Docker
+..\ELSA\concurrent-api-invoker> docker build -t longlethanh/api-invoker-test .
+..\ELSA\concurrent-api-invoker> docker push longlethanh/api-invoker-test
+..\ELSA\concurrent-api-invoker> docker run -d --name elsa-api-invoker-test --network elsa-vpn longlethanh/api-invoker-test:latest
+
+![img.png](containers.png)
 
 # ##################################################################################### #
 
